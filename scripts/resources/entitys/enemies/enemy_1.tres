@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Entity" load_steps=3 format=3 uid="uid://bjaryt54p3e52"]
+
+[ext_resource type="Script" uid="uid://cojxro0l885x7" path="res://scripts/objects/abilitie.gd" id="1_lxrxu"]
+[ext_resource type="Script" uid="uid://bttl5jrf6hyr6" path="res://scripts/objects/entity.gd" id="2_xc80i"]
+
+[resource]
+script = ExtResource("2_xc80i")
+life = 0.0
+damage = 0.0
+defense = 0.0
+abilities = Array[ExtResource("1_lxrxu")]([])
+entity_velocity = 0.0
+metadata/_custom_type_script = "uid://bttl5jrf6hyr6"

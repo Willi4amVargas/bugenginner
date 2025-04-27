@@ -1,26 +1,28 @@
+class_name Player
 extends CharacterBody2D
 
+@export var player_stats:Entity
 # Velocidad del personaje
-var vel = 100
 @onready var player_animations:AnimatedSprite2D = $Sprite
 
-func _physics_process(delta: float) -> void:
+
+func _physics_process(_delta: float) -> void:
 	# Reiniciar el vector de movimiento
 	var movimiento = Vector2()
 
 	# Detectar entrada del usuario
 	if Input.is_action_pressed("ui_right"):
 		player_animations.play("right")
-		movimiento.x += vel
+		movimiento.x += player_stats.entity_velocity
 	elif Input.is_action_pressed("ui_left"):
 		player_animations.play("left")
-		movimiento.x -= vel
+		movimiento.x -= player_stats.entity_velocity
 	elif Input.is_action_pressed("ui_up"):
 		player_animations.play("up")
-		movimiento.y -= vel
+		movimiento.y -= player_stats.entity_velocity
 	elif Input.is_action_pressed("ui_down"):
 		player_animations.play("down")
-		movimiento.y += vel
+		movimiento.y += player_stats.entity_velocity
 	else :
 		player_animations.stop()
 	
@@ -29,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 	# Normalizar el vector de movimiento para evitar movimiento más rápido en diagonal
 	if movimiento.length() > 0:
-		movimiento = movimiento.normalized() * vel
+		movimiento = movimiento.normalized() * player_stats.entity_velocity
 
 	# Asignar el movimiento a la propiedad "velocity" de CharacterBody2D
 	velocity = movimiento

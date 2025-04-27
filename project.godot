@@ -14,10 +14,6 @@ config/name="BugEnginner"
 run/main_scene="uid://bqtxut86gpwdt"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
-[autoload]
-
-GLOBALENV="*res://scripts/game_configs.gd"
-
 [display]
 
 window/size/viewport_width=1024

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Entity" load_steps=6 format=3 uid="uid://bs2vps2ihad2u"]
+
+[ext_resource type="Script" uid="uid://cojxro0l885x7" path="res://scripts/objects/abilitie.gd" id="1_16ybu"]
+[ext_resource type="Texture2D" uid="uid://5whvdgv6two1" path="res://assets/pngs/items.png" id="2_ravt7"]
+[ext_resource type="Texture2D" uid="uid://d1yl3q0cmq20b" path="res://assets/pngs/npc.png" id="2_uex2y"]
+[ext_resource type="Script" uid="uid://bttl5jrf6hyr6" path="res://scripts/objects/entity.gd" id="3_ravt7"]
+
+[sub_resource type="Resource" id="Resource_6pi6l"]
+script = ExtResource("1_16ybu")
+abilitie_name = "Fire Ball"
+description = "Emits a fire ball"
+damage = 20.0
+abilitie_sprite = ExtResource("2_ravt7")
+metadata/_custom_type_script = "uid://cojxro0l885x7"
+
+[resource]
+script = ExtResource("3_ravt7")
+entity_sprite = ExtResource("2_uex2y")
+name = "Jugador"
+life_color = Color(2.71939e-06, 0.710683, 4.42803e-06, 1)
+life = 100.0
+damage = 50.0
+defense = 10.0
+abilities = Array[ExtResource("1_16ybu")]([SubResource("Resource_6pi6l")])
+entity_velocity = 250.0
+metadata/_custom_type_script = "uid://bttl5jrf6hyr6"

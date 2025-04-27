@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://62xfq8uplw5m"]
+
+[ext_resource type="Script" uid="uid://b3llutqkp5itm" path="res://scripts/objects/battle_scene.gd" id="1_fnjbt"]
+
+[node name="BattleScene" type="CanvasLayer"]
+script = ExtResource("1_fnjbt")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelContainer" type="GridContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EnemyContainer" type="GridContainer" parent="GridContainer/LabelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Enemy" type="Label" parent="GridContainer/LabelContainer/EnemyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+text = "ESTADISTICAS DEL JUGADOR"
+horizontal_alignment = 2
+
+[node name="EnemyLife" type="ColorRect" parent="GridContainer/LabelContainer/EnemyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayerContainer" type="GridContainer" parent="GridContainer/LabelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Player" type="Label" parent="GridContainer/LabelContainer/PlayerContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+text = "ESTADISTICAS DEL ENEMIGO"
+
+[node name="PlayerLife" type="ColorRect" parent="GridContainer/LabelContainer/PlayerContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ActionsContainer" type="GridContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Action4" type="Button" parent="GridContainer/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "REDUCIR DEFENSA"
+
+[node name="Action3" type="Button" parent="GridContainer/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ATAQUE RAPIDO"
+
+[node name="Action2" type="Button" parent="GridContainer/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FINTA"
+
+[node name="Action1" type="Button" parent="GridContainer/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ATTACK"
+
+[connection signal="pressed" from="GridContainer/ActionsContainer/Action4" to="." method="_on_action_4_pressed"]
+[connection signal="pressed" from="GridContainer/ActionsContainer/Action3" to="." method="_on_action_3_pressed"]
+[connection signal="pressed" from="GridContainer/ActionsContainer/Action2" to="." method="_on_action_2_pressed"]
+[connection signal="pressed" from="GridContainer/ActionsContainer/Action1" to="." method="_on_action_1_pressed"]

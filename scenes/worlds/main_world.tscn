@@ -32,13 +32,4 @@ tile_map_data = PackedByteArray("AADv//3/AAAGAAAAAAD9//3/AAAGAAAAAADu/w8AAAAGAAA
 tile_set = ExtResource("2_tt5ry")
 
 [node name="Enemy4" parent="." instance=ExtResource("4_bdp8l")]
-position = Vector2(-154, 39)
-
-[node name="Enemy3" parent="." instance=ExtResource("4_bdp8l")]
-position = Vector2(-114, 329)
-
-[node name="Enemy2" parent="." instance=ExtResource("4_bdp8l")]
-position = Vector2(250, 254)
-
-[node name="Enemy" parent="." instance=ExtResource("4_bdp8l")]
-position = Vector2(320, 46)
+position = Vector2(279, 34)

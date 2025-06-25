@@ -6,6 +6,10 @@ var original_values:Entity
 
 @export var battle_escene:PackedScene = preload("res://scenes/battle_scenes/battle_scene.tscn")
 
+func _process(delta: float) -> void:
+	if enemy_stats.life <= 0:
+		queue_free() 
+
 func _ready() -> void:
 	enemy_stats = enemy_stats.duplicate()
 	original_values = enemy_stats.duplicate()

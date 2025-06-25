@@ -5,6 +5,15 @@
 [node name="BattleScene" type="CanvasLayer"]
 script = ExtResource("1_fnjbt")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.403922)
+
 [node name="GridContainer" type="GridContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +30,13 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+columns = 2
+
+[node name="Empy2" type="Label" parent="GridContainer/LabelContainer/EnemyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+horizontal_alignment = 2
 
 [node name="Enemy" type="Label" parent="GridContainer/LabelContainer/EnemyContainer"]
 layout_mode = 2
@@ -29,7 +45,22 @@ size_flags_vertical = 10
 text = "ESTADISTICAS DEL JUGADOR"
 horizontal_alignment = 2
 
-[node name="EnemyLife" type="ColorRect" parent="GridContainer/LabelContainer/EnemyContainer"]
+[node name="Empy" type="Label" parent="GridContainer/LabelContainer/EnemyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer/LabelContainer/EnemyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 70
+
+[node name="EnemyLife" type="ColorRect" parent="GridContainer/LabelContainer/EnemyContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -38,6 +69,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+columns = 2
 
 [node name="Player" type="Label" parent="GridContainer/LabelContainer/PlayerContainer"]
 layout_mode = 2
@@ -45,10 +77,31 @@ size_flags_horizontal = 3
 size_flags_vertical = 10
 text = "ESTADISTICAS DEL ENEMIGO"
 
-[node name="PlayerLife" type="ColorRect" parent="GridContainer/LabelContainer/PlayerContainer"]
+[node name="Empy2" type="Label" parent="GridContainer/LabelContainer/PlayerContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer/LabelContainer/PlayerContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 70
+
+[node name="PlayerLife" type="ColorRect" parent="GridContainer/LabelContainer/PlayerContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Empy" type="Label" parent="GridContainer/LabelContainer/PlayerContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+horizontal_alignment = 2
 
 [node name="ActionsContainer" type="GridContainer" parent="GridContainer"]
 layout_mode = 2

@@ -19,6 +19,14 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 window/size/viewport_width=1024
 window/size/viewport_height=768
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "purple",
+"res://scenes/": "green",
+"res://scripts/": "red"
+}
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

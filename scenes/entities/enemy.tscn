@@ -18,7 +18,7 @@ entity_velocity = 100.0
 metadata/_custom_type_script = "uid://bttl5jrf6hyr6"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67neu"]
-size = Vector2(123, 68.5)
+size = Vector2(14, 109)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ktqfp"]
 atlas = ExtResource("2_b4nis")
@@ -41,6 +41,7 @@ enemy_stats = SubResource("Resource_hlb8m")
 metadata/_custom_type_script = "uid://2txyog1nd4mr"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 43.5)
 shape = SubResource("RectangleShape2D_67neu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

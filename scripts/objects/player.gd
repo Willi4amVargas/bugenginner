@@ -5,6 +5,11 @@ extends CharacterBody2D
 # Velocidad del personaje
 @onready var player_animations:AnimatedSprite2D = $Sprite
 
+# ESTO ES HUELE A PUPU PERO NOSE CMO MAS HACERLO POR AHORA :p 
+# (nadie mas va a tocar el codigo)
+func _ready() -> void:
+	if GLOBAL.scene_player_last == "INITIAL_HOUSE":
+		self.position = GLOBAL.last_player_position
 
 func _physics_process(_delta: float) -> void:
 	# Reiniciar el vector de movimiento

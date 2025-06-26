@@ -4,10 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d1yl3q0cmq20b" path="res://assets/pngs/npc.png" id="1_merdl"]
 [ext_resource type="Resource" uid="uid://bs2vps2ihad2u" path="res://scripts/resources/entitys/player.tres" id="2_1ie0h"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b0kkn"]
-radius = 2.5
-height = 19.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
 atlas = ExtResource("1_merdl")
 region = Rect2(0, 0, 16, 32)
@@ -143,14 +139,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b0kkn"]
+radius = 3.0
+height = 13.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_b0kkn")
 player_stats = ExtResource("2_1ie0h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
-shape = SubResource("CapsuleShape2D_b0kkn")
-
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dp3pk")
 animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_b0kkn")

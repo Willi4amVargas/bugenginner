@@ -1,11 +1,44 @@
-[gd_scene load_steps=5 format=4 uid="uid://b5iickq33l80k"]
+[gd_scene load_steps=14 format=4 uid="uid://b5iickq33l80k"]
 
 [ext_resource type="PackedScene" uid="uid://b1dis5rwbh4ag" path="res://scenes/entities/player.tscn" id="1_6x5uh"]
+[ext_resource type="Script" uid="uid://doa6ukbi4pcbw" path="res://scripts/lib/main_world.gd" id="1_fupqw"]
 [ext_resource type="TileSet" uid="uid://c73asptwj8i0o" path="res://assets/tilesets/overworld.tres" id="2_tt5ry"]
 [ext_resource type="TileSet" uid="uid://cf7qner0008e4" path="res://assets/tilesets/items.tres" id="2_wjoj8"]
 [ext_resource type="PackedScene" uid="uid://bpdl2cob18uyc" path="res://scenes/entities/enemy.tscn" id="4_bdp8l"]
+[ext_resource type="PackedScene" uid="uid://ca43i3gfmdw88" path="res://scenes/entities/question_activator.tscn" id="5_hvjhl"]
+[ext_resource type="Texture2D" uid="uid://d18it6j2g8yea" path="res://assets/bg_question.png" id="6_hvjhl"]
+[ext_resource type="Script" uid="uid://bc8br0t4tiq1p" path="res://scripts/objects/question_resource.gd" id="7_eu67m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fupqw"]
+
+[sub_resource type="Resource" id="Resource_eu67m"]
+script = ExtResource("7_eu67m")
+background = ExtResource("6_hvjhl")
+question = "¿Manera correcta de hacer una variable?"
+correct_answer = "1"
+wrong_answers = Array[String](["2", "3", "4"])
+metadata/_custom_type_script = "uid://bc8br0t4tiq1p"
+
+[sub_resource type="Resource" id="Resource_fupqw"]
+script = ExtResource("7_eu67m")
+background = ExtResource("6_hvjhl")
+question = "¿Que imprime este codigo?\\nprint(\"hello\"+\"world\")"
+correct_answer = "helloworld"
+wrong_answers = Array[String](["hello world", "hello+world", "error"])
+metadata/_custom_type_script = "uid://bc8br0t4tiq1p"
+
+[sub_resource type="Resource" id="Resource_b0arr"]
+script = ExtResource("7_eu67m")
+background = ExtResource("6_hvjhl")
+question = "¿Qué tipo de dato es 3.14?"
+correct_answer = "float"
+wrong_answers = Array[String](["int", "bool", "str"])
+metadata/_custom_type_script = "uid://bc8br0t4tiq1p"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eu67m"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fupqw")
 
 [node name="Terrenos" type="TileMapLayer" parent="."]
 position = Vector2(-4, 0)
@@ -21,7 +54,7 @@ tile_map_data = PackedByteArray("AAAQAAkAAAACAAwAAAAQAAoAAAACAAwAAAAQAAsAAAACAAw
 tile_set = ExtResource("2_tt5ry")
 
 [node name="Player" parent="." instance=ExtResource("1_6x5uh")]
-position = Vector2(122, 38)
+position = Vector2(590, 39)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.5, 1.5)
@@ -33,3 +66,28 @@ tile_set = ExtResource("2_tt5ry")
 
 [node name="Enemy4" parent="." instance=ExtResource("4_bdp8l")]
 position = Vector2(279, 34)
+
+[node name="QuestionActivator3" parent="." instance=ExtResource("5_hvjhl")]
+position = Vector2(-41, -6)
+shape = SubResource("RectangleShape2D_fupqw")
+question_info = SubResource("Resource_eu67m")
+
+[node name="QuestionActivator2" parent="." instance=ExtResource("5_hvjhl")]
+position = Vector2(217, -9)
+shape = SubResource("RectangleShape2D_fupqw")
+question_info = SubResource("Resource_fupqw")
+
+[node name="QuestionActivator" parent="." instance=ExtResource("5_hvjhl")]
+position = Vector2(438, -18)
+shape = SubResource("RectangleShape2D_fupqw")
+question_info = SubResource("Resource_b0arr")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(30, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(618, -10)
+shape = SubResource("CircleShape2D_eu67m")
+debug_color = Color(0, 0.972855, 0.539022, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -14,10 +14,21 @@ config/name="BugEnginner"
 run/main_scene="uid://bqtxut86gpwdt"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+GLOBAL="*res://scripts/global.gd"
+
 [display]
 
-window/size/viewport_width=1024
-window/size/viewport_height=768
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="BugEnginner"
 
 [file_customization]
 

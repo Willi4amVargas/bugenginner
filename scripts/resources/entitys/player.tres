@@ -22,5 +22,5 @@ life = 100.0
 damage = 30.0
 defense = 30.0
 abilities = Array[ExtResource("1_16ybu")]([SubResource("Resource_6pi6l")])
-entity_velocity = 150.0
+entity_velocity = 80.0
 metadata/_custom_type_script = "uid://bttl5jrf6hyr6"

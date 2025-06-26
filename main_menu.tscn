@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqtxut86gpwdt"]
+[gd_scene load_steps=4 format=3 uid="uid://bqtxut86gpwdt"]
 
 [ext_resource type="Script" uid="uid://b2b17kcms6ldd" path="res://scripts/main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://y0nb4v1jsq65" path="res://assets/bg_home_page.png" id="1_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0, 0.273866, 0.137613, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +13,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BgHomePage" type="Sprite2D" parent="."]
+position = Vector2(245, 116)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_7vrkn")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -26,6 +35,8 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="GridContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
 text = "Bug Solver"
 metadata/_edit_use_anchors_ = true
 

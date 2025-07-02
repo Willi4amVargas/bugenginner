@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de8eisipnwch0"
+path="res://.godot/imported/medieval music game.mp3-4954eb87a55fa1daa867a8bbde9a79ff.mp3str"
+
+[deps]
+
+source_file="res://assets/Musica/medieval music game.mp3"
+dest_files=["res://.godot/imported/medieval music game.mp3-4954eb87a55fa1daa867a8bbde9a79ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

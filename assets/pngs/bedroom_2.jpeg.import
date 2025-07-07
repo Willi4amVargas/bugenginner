@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3h143jahxr27"
-path="res://.godot/imported/dormitorio 2.jpeg-fad75f04318dec9da948fe45a47e11d9.ctex"
+path="res://.godot/imported/bedroom_2.jpeg-47b91b0e0a5a621ba02ebdfac5600c6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pngs/dormitorio 2.jpeg"
-dest_files=["res://.godot/imported/dormitorio 2.jpeg-fad75f04318dec9da948fe45a47e11d9.ctex"]
+source_file="res://assets/pngs/bedroom_2.jpeg"
+dest_files=["res://.godot/imported/bedroom_2.jpeg-47b91b0e0a5a621ba02ebdfac5600c6f.ctex"]
 
 [params]
 

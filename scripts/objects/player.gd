@@ -9,8 +9,9 @@ extends CharacterBody2D
 # (nadie mas va a tocar el codigo)
 func _ready() -> void:
 	if GLOBAL.scene_player_last == "INITIAL_HOUSE":
+		print(GLOBAL.last_player_position)
 		self.position = GLOBAL.last_player_position
-
+		
 func _physics_process(_delta: float) -> void:
 	# Reiniciar el vector de movimiento
 	var movimiento = Vector2()

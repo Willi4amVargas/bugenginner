@@ -1980,6 +1980,8 @@ texture = ExtResource("1_gbl2l")
 19:11/0 = 0
 20:9/0 = 0
 15:5/0 = 0
+15:16/0 = 0
+15:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.359718, -8, 8, -8, 8, 8, -0.899294, 8)
 
 [resource]
 physics_layer_0/collision_layer = 1

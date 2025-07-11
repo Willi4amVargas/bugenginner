@@ -226,10 +226,15 @@ texture = ExtResource("1_gbl2l")
 2:5/0/terrain_set = 0
 2:5/0/terrains_peering_bit/top_left_corner = 0
 6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.41732, 3.41732, -3.95689, -2.51802, 3.41732, -2.51802, 6.47491, 1.43887, 4.67633, 4.49647)
 7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.77703, -8, 5.03605, -4.31661, 8, 1.79859, 6.29506, 5.75548, -8, 5.03605, -8, -2.1583)
 8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.31661, -4.49647, 5.03605, -4.67633, 6.47491, 2.15831, 6.29506, 8, -1.43887, 8, -8, 5.57562, -8, -0.359716)
 9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.49647, -6.1152, 3.41732, -3.23746, 8, 6.47491, -6.29506, 5.2159, -8, 0)
 10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.23746, -2.1583, 5.75548, 1.43887, 6.47491, 6.29506, -5.39576, 6.29506, -6.47491, 2.69788)
 11:5/0 = 0
 12:5/0 = 0
 13:5/0 = 0
@@ -1974,6 +1979,7 @@ texture = ExtResource("1_gbl2l")
 10:26/0 = 0
 19:11/0 = 0
 20:9/0 = 0
+15:5/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 1
